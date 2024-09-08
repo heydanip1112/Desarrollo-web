@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap');
+
+h1 {
+    color: white; font-family: 'Satisfy', sans-serif; font-size: 65px;
+}
+
+section .sinopsis h2 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+}
+
+section .sinopsis p {
+    color: black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+section .personajes h2 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+}
+
+section .personajes ul {
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+}
+
+section .temporada1 h2 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+}
+
+section .temporada1 ul {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+section .temporada2 h2 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+}
+
+section .temporada2 ul {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+section .info h2 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+}
+
+section .info table {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+header img{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.card {
+    background-color: rgb(236, 250, 253);
+    list-style: none;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 20px;
+    border: 2px solid rgb(101, 207, 207);
+}
+
+.card p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}

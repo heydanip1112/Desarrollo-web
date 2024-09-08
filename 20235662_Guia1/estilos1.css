@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+div {
+    font-size: 20px;
+}
+
+div h2 {
+    text-decoration: underline;
+    color: white;
+}
+
+section .p1 {
+    color: navy; font-weight: bold;
+}
+
+section .p2 {
+    text-transform: uppercase; text-align: justify;
+}
+
+section .p3 {
+    font-size: 12px;
+}
