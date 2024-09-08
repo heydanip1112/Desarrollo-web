@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap');
 
 h1 {
-    color: white; font-family: 'Satisfy', sans-serif; font-size: 65px;
+    color: white; 
+    font-family: 'Satisfy', sans-serif; 
+    font-size: 65px;
+    text-align: center;
 }
 
 section .sinopsis h2 {
