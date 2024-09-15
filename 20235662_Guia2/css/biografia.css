@@ -42,6 +42,7 @@ h3 {
     text-align: center;
     font-size: 2rem;
     font-family: 'Nerko One', sans-serif;
+    color: #5a132a;
 }
 
 p{
@@ -84,19 +85,23 @@ footer p{
 }
 
 section article{
-    background-color: rgba(199,91,122,0.3);
+    background-color: rgba(199,91,122,0.2);
     margin-top: 20px;
     padding: 12px
 }
 
 nav div a {
     background-color: #C75B7A;
-    border-right: 1px solid;
-    color: black;
+    border-right: 3px solid;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    border-top: 3px solid;
+    color: #5a132a;
     font-size: 0.6rem;
     float: left;
     padding: 10px;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 nav div a:hover{
@@ -109,4 +114,9 @@ nav div a[href="https://www.esen.edu.sv/"]:hover{
 
 nav div a[href="https://www.hsmcj.org/elsalvador/index.html"]:hover{
     background-color: #921A40;
+}
+
+section article nav{
+    display: flex;
+    justify-content: center;
 }
