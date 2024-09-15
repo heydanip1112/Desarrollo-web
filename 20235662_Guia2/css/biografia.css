@@ -88,3 +88,25 @@ section article{
     margin-top: 20px;
     padding: 12px
 }
+
+nav span a {
+    background-color: #921A40;
+    border-right: 1px solid;
+    color: black;
+    font-size: 0.6rem;
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav span a:hover{
+    background-color: #C75B7A;
+}
+
+nav span a[href="https://www.esen.edu.sv/"]:hover{
+    background-color: #F4D9D0;
+}
+
+nav span a[href="https://www.hsmcj.org/elsalvador/index.html"]:hover{
+    background-color: #F4D9D0;
+}
