@@ -76,7 +76,7 @@ section article:nth-child(2){
     position: static;
     left: 100px;
     top: 50px;
-    visibility: hidden;
+    display: none;
 }
 
 footer div{
