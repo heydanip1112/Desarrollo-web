@@ -14,12 +14,14 @@ header{
     background: #16A085;
     height: 130px;
     overflow: hidden;
+    position: sticky;
 }
 
 footer{
     margin-top: 20px;
     background: #16A085;
     height: 50px;
+    position: sticky;
 }
 
 header div, footer div{
