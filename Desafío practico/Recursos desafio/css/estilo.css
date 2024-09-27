@@ -76,9 +76,11 @@ header .envoltorio nav>ul>li>ul{
 	background-color: black;
 }
 
-.menu ul{
+.menu:hover ul{
 	display: block;
 }
+
+
 
 header .envoltoio nav>ul>li:hover ul {
     display: block;
