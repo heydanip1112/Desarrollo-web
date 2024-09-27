@@ -1,0 +1,11 @@
+.ofertas .envoltorio video{
+    width: 750px;
+    height: 550px;
+    margin: 200px;
+}
+
+.ofertas .envoltorio{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

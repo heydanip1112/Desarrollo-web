@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Bolsa de trabajo ESEN</title>
+	<link href="css/estilo.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+	<header>
+		<div class="envoltorio">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo2.png" title="logo" height="42px" /></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">INICIO</a></li>
+					<li><a href="ofertas.html">OFERTAS</a></li>
+					<li><a href="consejos.html">CONSEJOS</a></li>
+					<li class="activo"><a href="aplicar.html">APLICAR</a></li>
+					<li><a href="#">CONTACTO</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<article class="ofertas">
+			<div class="envoltorio">
+				<h2>Formulario de aplicación</h2>
+				<form action="./php/aplicar.php" method="post">
+					<p>Nombre <br> <input type="text" name="nombre" required ></p>
+					<br>
+					<p>Apellidos <br> <input type="text" name="apellidos" required></p>
+					<br>
+					<p>Carnet <br> <input type="text" name="carnet" required pattern="[0-9]{8}"></p>
+					<br>
+					<p>Departamento de residencia 
+						<p id="dep"><input type="radio" name="eDepartamento">Santa Ana</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Ahuachapan</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Sonsonate</P>
+						<p id="dep"><input type="radio" name="eDepartamento">Chalatenango</p>
+						<p id="dep"><input type="radio" name="eDepartamento">La Libertad</p>
+						<p id="dep"><input type="radio" name="eDepartamento">San Salvador</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Cabañas</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Usulutan</p>
+						<p id="dep"><input type="radio" name="eDepartamento">San Miguel</p>
+						<p id="dep"><input type="radio" name="eDepartamento">La Union</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Morazan</p>
+						<p id="dep"><input type="radio" name="eDepartamento">La Paz</p>
+						<p id="dep"><input type="radio" name="eDepartamento">San Vicente</p>
+						<p id="dep"><input type="radio" name="eDepartamento">Cuscatlan</p>
+					</p>
+					<br>
+					<p>Edad <br> <input type="number" name="edad" required></p>
+					<br>
+					<p>Genero <br> </p>
+						<p id="gen"><input type="radio" name="eGenero">Femenino</p>
+						<p id="gen"><input type="radio" name="eGenero">Masculino</p>
+					<br>
+					<p>Fecha de nacimiento <br> <input type="date" name="fechaNacimiento" required></p>
+					<br>
+					<p>Número de teléfono <br> <input type="tel" min="600000" max="799999" name="teléfono" required></p>
+					<br>
+					<p>Carrera </p>
+						<p id="carr"><input type="radio" name="eCarrera">Ingeniería de Software y Negocios Digitales</p>
+						<p id="carr"><input type="radio" name="eCarrera">Ingeniería de Negocios</p>
+						<p id="carr"><input type="radio" name="eCarrera">Licenciatura en Economía y Negocios</p>
+						<p id="carr"><input type="radio" name="eCarrera">Licenciatura en Ciencias Jurídicas</p>
+					<br>
+					<p>Pretensión salarial <br> <input type="number" min="0" max="1000000" name="pretensionSalarial" required></p>
+					<br>
+					<button id="boton" type="submit" >Enviar datos</button>
+					<br>
+					<br>
+					<button id="boton2" type="reset" >Borrar datos</button>
+				</form>
+			</div>
+		</article>
+		
+	</section>
+	<footer>
+		<p>CREADO POR: Daniela Pineda - 20235662</p>
+	</footer>
+</body>
+</html>
+
+
