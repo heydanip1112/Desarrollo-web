@@ -18,6 +18,9 @@ header{
 	left: 0;
     z-index: 10;
 	border-bottom: 5px solid rgb(35, 71, 135);
+	align-items: center;
+	text-decoration: none;
+	text-align: center;
 }
 
 
@@ -36,7 +39,7 @@ header .envoltorio nav>ul{
 	display: flex;
 	justify-content: flex-end;
 	position: relative;
-	width: 100%;
+	width: fit-content;
 }
 
 header .envoltorio nav li{
@@ -150,7 +153,7 @@ header .envoltorio nav>ul>li>ul>li>a{
     margin: 30px 1.5%;
     border: solid 0.5px rgba(0, 0, 0, 0.089);
     text-align: center;
-	display: block;
+	display:block;
 	position: relative;
 	margin-top: 30px;
 	align-items: center;

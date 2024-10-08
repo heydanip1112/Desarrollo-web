@@ -3,19 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Desarrollo Web</title>
 </head>
-<body style="background-color: rgb(250, 225, 235);">
-    <h1 style="font-size: 60px; color: rgb(151, 101, 151);">Desarrollo Web I</h1>
+<body>
+    <header>
+        <h1>Desarrollo Web I</h1>
+        <h2>Profesor: Ing.Guillermo Calderón </h2>
+        <br>
+        <p>En esta materia, aprendemos a desarrollar páginas web a través de distintas herramientas como html, css y javascript. Analizamos todos los aspectos importantes que puede contener una página, como títulos, cuadros de texto, imágenes, el respectivo posicionamiento de todos estos elementos y también, desarrollamos diseños responsivos que sean agradables a la vista de los usuarios para que estos tenga la mejor experiencia posible.</p>
+        <br>
+    </header>
+    <hr id="hr-header">
+    <div class="contenedor-slider">
+        <img src="./img/Dani Pineda.jpg" alt="Dani Pineda">
+    </div>
     <br>
-    <h2>Nombre: Daniela Rocío Pineda Pineda</h2>
-    <h2>Carnet: 20235662</h2>
-    <h2>Profesor: Ing.Guillermo Calderón </h2>
+    <section class="personal">
+        <div id="imgDesc">
+            <div id="descripcion">
+                <h2>Nombre: Daniela Rocío Pineda Pineda</h2>
+                <h2>Carnet: 20235662</h2>
+                <h2>Sobre mí: </h2>
+                <p>Mi nombre completo es Daniela Rocío Pineda Pineda. Actualmente, tengo 19 años, cumplo 20 el 11 de diciembre de este año. Vivo en Santa Ana, pues mi familia reside ahí; sin embargo, paso la mayor parte del tiempo en San Salvador, debido a mis estudios.</p>
+            </div>
+        </div>
+    </section>
     <br>
-    <h2>Lista de guías</h2>
-    <a href="./20235662_Guia1/index.html">Guía 1</a>
-    <a href="./20235662_Guia2/index.html">Guía 2</a>
-    <a href="./20235662_Guia3/index_tarea.html">Guía 3</a>
-    <a href="./Desafío practico/Recursos desafio/index.html">Desafío opcional</a>
+    <br>
+    <section class="guias">
+        <h2>Lista de guías</h2>
+        <br>
+        <div class="envoltorio">
+            <div id="Guia1" class="grid">
+                <a class="botoncito" href="./20235662_Guia1/index.html">Guía 1</a>
+                <p>En esta guía empezamos a aprender sobre html y css, utilizando las diferentes herramientas como títulos, párrafos, imágenes, etc. También, analizamos los estilos embebidos y utilizamos un index por primera vez.</p>
+            </div>
+            <br>
+            <div id="Guia2" class="grid">
+                <a class="botoncito" href="./20235662_Guia2/index.html">Guía 2</a>
+                <p>En esta guía, retomamos los temas anteriores a más profundidad. A la vez, empezamos a ahondar de mejor forma en el css, utilizando selectores.</p>
+            </div>
+            <br>
+            <div id="Guia3" class="grid">
+                <a class="botoncito" href="./20235662_Guia3/index_tarea.html">Guía 3</a>
+                <p>Aquí, empezamos a aprender sobre posicionamiento de los diferentes objetos que podemos utilizar gracias a html. También, empezamos a estudiar la creación de un menú para cada una de nuestra páginas, así como elementos interesantes de estos como el "hover".</p>
+            </div>
+            <br>
+            <div id="Desafio" class="grid">
+                <a class="botoncito" href="./Desafío practico/Recursos desafio/index.html">Desafío opcional</a>
+                <p>Este es un desafío práctico, aparte de las guías, que requirió utilizar todas los elementos previamente aprendidos. Parte del ejercicio consistía en recrear una imagen previamente establecida para la cual solo recibíamos los elementos básicos. Además, utilizamos nuevas funcionalidades, como la creación de un form y la inserción de un vídeo.</p>
+            </div>
+            <br>
+            <div id="Guia4" class="grid">
+                <a class="botoncito" href="./20235662_Guia4/indextarea.html">Guía 4</a>
+                <p>En esta guía utilizamos todos los temas vistos previamente, pero nos enfocamos principalmente en la creación de un diseño responsivo en al menos tres tamaños de pantalla: pc, tablet y smartphone.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="foda">
+        <h2>FODA</h2>
+        <br>
+        <h3>Fortalezas: </h3>
+        <p id="pregunta">¿Qué habilidades han dominado o mejorado significativamente?</p>
+        <br>
+        <p>Una de las habilidades que he mejorado ha sido la de posicionamiento, considero que con cada guía y ejercicio lo entiendo mejor, puedo notar la diferencia respecto a la primer guía al respecto.</p>
+        <br>
+        <h3>Oportunidades: </h3>
+        <p id="pregunta">¿Qué han aprendido que les puede servir en otros proyectos o ámbitos profesionales?</p>
+        <br>
+        <p>Realmente, cada parte de la materia ha contribuido a mi futuro profesional, y de hecho, me complace mencionar que por primera vez a lo largo de la carrera me he topado con una materia a la que quizá me quisiera dedicar por completo en un futuro.</p>
+        <br>
+        <h3>Debilidades: </h3>
+        <p id="pregunta">¿Qué áreas del desarrollo web sienten que necesitan seguir trabajando?</p>
+        <br>
+        <p>Una de las partes que más me cuesta es el diseño responsivo, pues resulta complejo editar cada detalle para que la calidad no se pierda en los distintos tipos de pantallas.</p>
+        <br>
+        <h3>Amenazas: </h3>
+        <p id="pregunta">¿Qué obstáculos encontraron (personales o técnicos) que podrían haber impactado su progreso?</p>
+        <br>
+        <p>Creo que me he enfrentado principalmente a desafíos personales, pues en muchas ocasiones dejar las cosas a último momento no me beneficia y considero que ese es mi mayor problema. En cuanto a desafíos técnicos, no puedo pensar en ninguno que haya representado un problema mayor.</p>
+    </section>
+    <br>
+    <br>
+    <section class="retroalimentacion">
+        <h2>Retroalimentación del curso: </h2>
+        <br>
+        <h3>Lo que les ha gustado: </h3>
+        <p id="pregunta">¿Qué parte del curso disfrutaron más? ¿Qué les motivó o resultó particularmente interesante?</p>
+        <br>
+        <p>Realmente cada tema que hemos visto me ha parecido interesante, especialmente porque a medida los temas se vuelven más complejos, también lo hacen las páginas lo que me produce satisfacción. Si tuviera que escoger un tema sería la creación de menús.</p>
+        <br>
+        <h3>Lo que no les ha gustado: </h3>
+        <p id="pregunta">¿Qué les resultó desafiante o frustrante? Esto puede incluir la complejidad de algunos temas, el tiempo de dedicación necesario, etc</p>
+        <br>
+        <p>Creo que hasta el momento el tema que me parece especialmente frustrante es la creación de diseños responsivos, pues en muchas ocasiones me topo con errores que no sé de dónde provienen y toma demasiado tiempo solucionarlos.</p>
+        <br>
+        <h3>Retos asumidos: </h3>
+        <p id="pregunta">Describan los desafíos que enfrentaron y cómo los resolvieron</p>
+        <br>
+        <p>Creo que el mayor desafío que tuve que asumir fue el "Desafío práctico" pues imitar la apariencia de una página resulta bastante complejp, y al lado de las herramientas proporcionadas en clase también debí utilizar muchísimo mi paciencia y prueba y error.</p>
+        <br>
+        <h3>Sugerencias para mejorar: </h3>
+        <p id="pregunta">¿Qué sugerencias tienen para mejorar el curso en futuras ediciones?</p>
+        <br>
+        <p>Creo que mi mayor sugerencia sería agregar una clase/ayudantía pues siento que con una más a la semana se podrían cubrir los temas más detenidamente.</p>
+    </section>
+    <br>
+    <br>
+    <section class="aprendizajecontinuo">
+        <h2>Sección de aprendizaje continuo: </h2>
+        <br>
+        <h3>Recursos adicionales:</h3>
+        <p id="pregunta">Una lista de recursos adicionales que encontraron valiosos fuera del curso:</p>
+        <br>
+        <div id="elementos">
+            <ul>
+                <li><p>elementor</p></li>
+                <li><p>css-tricks</p></li>
+                <li><p>MDN Web Docs</p></li>
+            </ul>
+        </div>
+        <br>
+        <h3>Planes futuros:</h3>
+        <p id="pregunta">¿Qué temas o tecnologías les gustaría explorar más allá del curso?</p>
+        <br>
+        <div id="temas">
+            <ul>
+                <li><p>Despliegue de páginas web utilizando la nube</p></li>
+                <li><p>Ruby</p></li>
+            </ul>
+        </div>
+    </section>
+    <hr id="hr-footer">
+    <footer>
+        <p>@Daniela Pineda derechos reservados</p>
+    </footer>
 </body>
 </html>
