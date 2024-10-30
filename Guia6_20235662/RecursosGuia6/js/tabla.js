@@ -15,7 +15,7 @@ const generarFila = (tipo, fila, columnas) => {
             } else {
                 tr += `<td class="text-center">Celda ${fila},${c}</td>`;
             }
-        }
+        }``
     }
     return (tr += '</tr>');
 }
