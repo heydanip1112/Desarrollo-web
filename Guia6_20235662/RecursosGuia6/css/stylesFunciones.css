@@ -24,3 +24,7 @@ textarea{
     height: 100px !important;
     resize: none;
 }
+
+.margen-superior {
+    margin-top: 10rem; 
+}
