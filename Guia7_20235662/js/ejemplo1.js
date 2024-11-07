@@ -37,10 +37,11 @@ const vericarForm = function () {
     
     input.forEach(input => {
         if (!input.value && input.type !== "radio" && input.type !== "checkbox") {
-            valido = false;
+            hayCamposVacios = true;
         }
+
         if ((input.type === "radio" || input.type === "checkbox") && !input.checked) {
-            valido = false;
+            hayCamposVacios = true;
         }
     });
 

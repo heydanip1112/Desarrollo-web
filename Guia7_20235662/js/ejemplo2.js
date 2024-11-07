@@ -120,54 +120,57 @@ const validarFormulario = function () {
             if (fechaIngresada > fechaActual) {
                 fechaInvalida = true; // La fecha ingresada no puede ser futura
             }
-        }if (elemento.type === "password"){
+        }
+
+        if (elemento.type === "password"){
             const contra1 = document.getElementById("idPassword").value;
             const contra2 = document.getElementById("idPasswordRepetir").value;
             if (contra1!==contra2){
                 contraDistinta=true;
-            } else {
-                contraDistinta=false;
-            }
-        }if (elemento.type === "email"){
+            }         
+        }
+
+        if (elemento.type === "email"){
 
             const emailCampo = document.getElementById("idCorreo").value;
             const emailValido = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
             if( !emailValido.test(emailCampo)) {
                 emailIncierto = true;
-            } else {
-                emailIncierto = false;
-            }
+            } 
+        } 
 
-        }else if (elemento.type === "text" || elemento.type === "password" || elemento.type === "date") {
+        if (elemento.type === "text" || elemento.type === "password" || elemento.type === "date") {
             if (elemento.value.trim() === "") {
+                console.log(elemento.value.length);
                 hayCamposVacios = true;
-            } else{
-                hayCamposVacios = false;
-            }
-        } else if (elemento.type === "radio") {
+            }         
+        } 
+
+        if (elemento.type === "radio") {
             const radios = formulario.elements[elemento.name];
             if (![...radios].some(radio => radio.checked)) {
                 hayCamposVacios = true;
-            }else{
-                hayCamposVacios = false;
-            }
-        } else if (elemento.type === "checkbox") {
-            const checkboxes = formulario.querySelectorAll(`input[name="${elemento.name}"]`);
+            }        
+        } 
+
+        if (elemento.type === "checkbox") {
+            const checkboxes = formulario.querySelectorAll(`input[type="checkbox"]`);
+            console.log(checkboxes);
             if (![...checkboxes].some(checkbox => checkbox.checked)) {
                 hayCamposVacios = true;
-            } else {
-                hayCamposVacios = false;
-            }
-        } else if(elemento.nodeName === "SELECT"){
+            }        
+        } 
+
+        if(elemento.nodeName === "SELECT"){
             const selectElement = document.getElementById("idCmPais");
             if (selectElement.selectedIndex === 0) {
                 hayCamposVacios = true;
-            } else {
-                hayCamposVacios = false;
-            }
+            }        
         }
     }
+
+    console.log(hayCamposVacios, fechaInvalida, contraDistinta, emailIncierto);
 
     if (hayCamposVacios) {
         alert("Hay campos vacíos o sin seleccionar");
@@ -175,7 +178,7 @@ const validarFormulario = function () {
         alert("Fecha de nacimiento inválida")
     }  else if (contraDistinta){
         alert("Las contraseñas son distintas")
-    }else if (emailIncierto){
+    } else if (emailIncierto){
         alert("El email ingresado no es válido")
     } else {
         alert("Formulario valido")
