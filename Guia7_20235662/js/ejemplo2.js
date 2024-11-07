@@ -105,37 +105,63 @@ const recorrerFormulario = function () {
 };
 
 const validarFormulario = function () {
-    let hayCamposVacios = false;
     const fechaActual = new Date();
+    let hayCamposVacios = false;
     let fechaInvalida = false;
+    let contraDistinta = false;
+    let emailIncierto = false;
 
     for (let elemento of formulario.elements) {
-        if (["text", "password", "email", "date"].includes(elemento.type) || elemento.nodeName === "SELECT") {
-            if (elemento.type === "date") {
-                const fechaIngresada = new Date(elemento.value); // Convierte el valor del input a Date
-                if (fechaIngresada > fechaActual) {
-                    fechaInvalida = true; // La fecha ingresada no puede ser futura
-                }
-            } else if (elemento.value.trim() === "") {
-                hayCamposVacios = true;
-            }else {
-                hayCamposVacios = false;
-                fechaInvalida = false;
-            }
-        } 
 
-        if (elemento.type === "radio") {
+
+        if (elemento.type === "date") {
+            const fechaIngresada = new Date(elemento.value); // Convierte el valor del input a Date
+
+            if (fechaIngresada > fechaActual) {
+                fechaInvalida = true; // La fecha ingresada no puede ser futura
+            }
+        }if (elemento.type === "password"){
+            const contra1 = document.getElementById("idPassword").value;
+            const contra2 = document.getElementById("idPasswordRepetir").value;
+            if (contra1!==contra2){
+                contraDistinta=true;
+            } else {
+                contraDistinta=false;
+            }
+        }if (elemento.type === "email"){
+
+            const emailCampo = document.getElementById("idCorreo").value;
+            const emailValido = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+            if( !emailValido.test(emailCampo)) {
+                emailIncierto = true;
+            } else {
+                emailIncierto = false;
+            }
+
+        }else if (elemento.type === "text" || elemento.type === "password" || elemento.type === "date") {
+            if (elemento.value.trim() === "") {
+                hayCamposVacios = true;
+            } else{
+                hayCamposVacios = false;
+            }
+        } else if (elemento.type === "radio") {
             const radios = formulario.elements[elemento.name];
             if (![...radios].some(radio => radio.checked)) {
                 hayCamposVacios = true;
             }else{
                 hayCamposVacios = false;
             }
-        }
-
-        if (elemento.type === "checkbox") {
+        } else if (elemento.type === "checkbox") {
             const checkboxes = formulario.querySelectorAll(`input[name="${elemento.name}"]`);
             if (![...checkboxes].some(checkbox => checkbox.checked)) {
+                hayCamposVacios = true;
+            } else {
+                hayCamposVacios = false;
+            }
+        } else if(elemento.nodeName === "SELECT"){
+            const selectElement = document.getElementById("idCmPais");
+            if (selectElement.selectedIndex === 0) {
                 hayCamposVacios = true;
             } else {
                 hayCamposVacios = false;
@@ -147,9 +173,14 @@ const validarFormulario = function () {
         alert("Hay campos vacíos o sin seleccionar");
     } else if (fechaInvalida) {
         alert("Fecha de nacimiento inválida")
-    }else {
-        alert("Formulario válido");
+    }  else if (contraDistinta){
+        alert("Las contraseñas son distintas")
+    }else if (emailIncierto){
+        alert("El email ingresado no es válido")
+    } else {
+        alert("Formulario valido")
     }
+
 
 };
 

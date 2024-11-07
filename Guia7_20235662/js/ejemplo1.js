@@ -30,37 +30,28 @@ const vericarTipoElemento = function () {
     }
 };
 
-const verificarFormulario = function () {
-    let formularioCompleto = true;
-    const elementos = newForm.querySelectorAll("input, select, textarea"); // Todos los campos dentro del formulario
 
-    elementos.forEach((elemento) => {
-        // Remover borde rojo antes de la validación
-        elemento.classList.remove("border-danger");
-
-        // Validar checkboxes y radios (requiere al menos uno seleccionado en su grupo)
-        if (elemento.type === "checkbox" || elemento.type === "radio") {
-            const groupName = elemento.name;
-            const grupo = newForm.querySelectorAll(`input[name="${groupName}"]`);
-            const algunoSeleccionado = Array.from(grupo).some((item) => item.checked);
-
-            if (!algunoSeleccionado) {
-                formularioCompleto = false;
-                grupo.forEach((item) => item.classList.add("border-danger"));
-            }
-        } else if (elemento.value.trim() === "") {
-            // Si es un campo de texto, select o textarea y está vacío, añadir borde rojo
-            formularioCompleto = false;
-            elemento.classList.add("border-danger");
+const vericarForm = function () {
+    let hayCamposVacios = false;
+    const input = newForm.querySelectorAll('input, select, textarea');
+    
+    input.forEach(input => {
+        if (!input.value && input.type !== "radio" && input.type !== "checkbox") {
+            valido = false;
+        }
+        if ((input.type === "radio" || input.type === "checkbox") && !input.checked) {
+            valido = false;
         }
     });
 
-    if (formularioCompleto) {
-        alert("Formulario completo");
+    // Mostrar mensaje de alerta
+    if (hayCamposVacios) {
+        alert("Existen campos vacíos en el formulario.");
     } else {
-        alert("Formulario incompleto. Por favor, complete todos los campos.");
+        alert("Todos los campos están completos.");
     }
 };
+
 
 // Añadir estilo para el borde rojo si no lo tienes en el CSS
 // .border-danger { border: 2px solid red; }
@@ -222,7 +213,7 @@ buttonCrear.onclick = () => {
     vericarTipoElemento();
 };
 buttonValidar.onclick = () => {
-    vericarFormulario();
+    vericarForm();
 };
 
 buttonAddElemento.onclick = () => {
